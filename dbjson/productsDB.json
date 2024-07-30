@@ -1,0 +1,35 @@
+[
+	{
+		"title": "product 1",
+		"description": "estos es una descripcion",
+		"code": "001",
+		"price": 1000,
+		"status": "true",
+		"stock": 100,
+		"category": "categoria 1",
+		"thumbnail": [],
+		"id": 1
+	},
+	{
+		"title": "product 2",
+		"description": "estos es una descripcion",
+		"code": "002",
+		"price": 1000,
+		"status": "true",
+		"stock": 10,
+		"category": "categoria 2",
+		"thumbnail": [],
+		"id": 2
+	},
+	{
+		"title": "product 4",
+		"description": "estos es una descripcion",
+		"code": "004",
+		"price": 1000,
+		"status": "true",
+		"stock": 100,
+		"category": "categoria 1",
+		"thumbnail": [],
+		"id": 3
+	}
+]
