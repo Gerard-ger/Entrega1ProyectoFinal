@@ -3,6 +3,7 @@ const productRouter = require('./routes/products.router.js')
 const cartRouter = require('./routes/carts.router.js')
 const handlebars = require('express-handlebars')
 const viewsRouter = require('./routes/views.router.js')
+const realTimeProducts = require('./routes/realTimeProducts.router.js')
 const { Server} = require('socket.io')
  
 const app = express()
@@ -16,6 +17,8 @@ app.use('/static', express.static(__dirname + '/public'))
 app.use('/api/products', productRouter)
 app.use('/api/carts', cartRouter)
 app.use('/', viewsRouter)
+app.use('/realtimeproducts', realTimeProducts)
+
 
 //configuracion de plantillas
 app.engine('handlebars', handlebars.engine())
@@ -25,10 +28,8 @@ app.set('view engine', 'handlebars')
 // Configuración del socket.io
 const httpServer = app.listen(PORT, () => {console.log('escuchando en el puerto: ', PORT)})
 const io = new Server(httpServer)
-io.on('connection', (socket) => {
-    console.log('nuevo cliente conectado')
-    
-})
+
+realTimeProducts(app, io);
 
 
 
