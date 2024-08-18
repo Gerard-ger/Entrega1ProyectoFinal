@@ -24,10 +24,14 @@ const productSocket = (io) => {
 
         socket.on('addProduct', async data => {
             await productService.addProduct(data)
+            const products = await productService.getProduct()
+            io.emit('productList', products)
         })
 
         socket.on('deleteProduct', async data => {
             await productService.deleteProduct(data)
+            const products = await productService.getProduct()
+            io.emit('productList', products)
         })
 
     })

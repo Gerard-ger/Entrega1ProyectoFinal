@@ -55,25 +55,14 @@
 		"id": 14
 	},
 	{
-		"title": "procut 3",
-		"description": "asgfaaq",
-		"code": 101,
-		"price": 2500,
+		"title": "sadasf",
+		"description": "asfasfq",
+		"code": 12314,
+		"price": 12412,
 		"status": "true",
-		"stock": 252,
-		"category": "cat 6",
+		"stock": 4124124,
+		"category": "asfgs122",
 		"thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-ro-rj-311-70b94603ae0bc70ca315911959189071-1024-1024.jpg",
-		"id": 15
-	},
-	{
-		"title": "dasrfqwer",
-		"description": "qwrqefq",
-		"code": 123123,
-		"price": 21312,
-		"status": "true",
-		"stock": 123123,
-		"category": "1sd12",
-		"thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-fr-rj-311-ef4b6ca4b08c3f434315911959189676-1024-1024.jpg",
-		"id": 23
+		"id": 20
 	}
 ]

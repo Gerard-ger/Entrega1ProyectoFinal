@@ -48,7 +48,7 @@ form.addEventListener('submit', evt => {
 
     socket.emit('addProduct', nuevoProduct)
 
-    // form.reset()
+    form.reset()
 
 })
 
