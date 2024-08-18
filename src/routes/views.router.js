@@ -20,7 +20,12 @@ router.get('/home', async (req, res)=>{
 })
 
 
+router.get('/realtimeproducts', (req, res) => {
 
+    res.render('realTimeProducts', {
+        title: '2da Entrega - Realtime Product',
+    })
+})
 
 
 module.exports = router
