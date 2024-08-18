@@ -1,6 +1,6 @@
 const socket = io()
 
-socket.on('updateProducts', products => {
+socket.on('productList', products => {
     // console.log(products)
     const productListDiv = document.querySelector('#product-list')
     let html = ''

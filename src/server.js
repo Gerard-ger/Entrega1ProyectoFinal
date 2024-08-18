@@ -14,22 +14,26 @@ const httpServer = app.listen(PORT, () => { console.log('escuchando en el puerto
 const io = new Server(httpServer)
 
 
-io.on('connection', async (socket) => {
-    const productService = new ProductManager()
-    console.log('nueva conexion')
+const productSocket = (io) => {
+    io.on('connection', async (socket) => {
+        const productService = new ProductManager()
+        console.log('nueva conexion')
 
-    const products = await productService.getProduct()
-    socket.emit('updateProducts', products)
+        const products = await productService.getProduct()
+        socket.emit('productList', products)
 
-    socket.on('addProduct', async data => {
-        await productService.addProduct(data)
+        socket.on('addProduct', async data => {
+            await productService.addProduct(data)
+        })
+
+        socket.on('deleteProduct', async data => {
+            await productService.deleteProduct(data)
+        })
+
     })
+}
 
-    socket.on('deleteProduct', async data => {
-        await productService.deleteProduct(data)
-    })
-
-});
+productSocket(io)
 
 //const ioMiddleware = (io) => (req, res, next) => {
 //    req.io = io
