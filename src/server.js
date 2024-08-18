@@ -17,12 +17,16 @@ const io = new Server(httpServer)
 io.on('connection', async (socket) => {
     const productService = new ProductManager()
     console.log('nueva conexion')
+
     const products = await productService.getProduct()
     socket.emit('updateProducts', products)
 
     socket.on('addProduct', async data => {
-           
         await productService.addProduct(data)
+    })
+
+    socket.on('deleteProduct', async data => {
+        await productService.deleteProduct(data)
     })
 
 });

@@ -1,7 +1,7 @@
 const socket = io()
 
-socket.on('updateProducts', products =>{
-   // console.log(products)
+socket.on('updateProducts', products => {
+    // console.log(products)
     const productListDiv = document.querySelector('#product-list')
     let html = ''
 
@@ -21,33 +21,37 @@ socket.on('updateProducts', products =>{
                     <p class='card-text'>ID: ${product.id}</p>
                 </div>
                 <div class='card-footer'>
-                    <button class='btn btn-outline-dark w-100'>Eliminar</button>
+                    <button class='btn btn-outline-dark w-100' onclick='eliminarProducto(${product.id})'>Eliminar</button>
                 </div>
             </div>                
         `
         productListDiv.innerHTML = html
     })
 
-    let form = document.querySelector('#products-list')
-
-    form.addEventListener('submit', evt => {
-        evt.preventDefault()
-
-        const title = form.elements.title.value
-        const description = form.elements.description.value
-        const code = Number(form.elements.code.value)
-        const price = Number(form.elements.price.value)
-        const status = form.elements.status.value
-        const stock = Number(form.elements.stock.value)
-        const category = form.elements.category.value
-        const thumbnail = form.elements.thumbnail.value
-
-        const nuevoProduct = {title, description, code, price, status, stock, category, thumbnail}
-        
-        socket.emit('addProduct', nuevoProduct )
-
-       // form.reset()
-
-    })
-    
 })
+
+let form = document.querySelector('#products-list')
+
+form.addEventListener('submit', evt => {
+    evt.preventDefault()
+
+    const title = form.elements.title.value
+    const description = form.elements.description.value
+    const code = Number(form.elements.code.value)
+    const price = Number(form.elements.price.value)
+    const status = form.elements.status.value
+    const stock = Number(form.elements.stock.value)
+    const category = form.elements.category.value
+    const thumbnail = form.elements.thumbnail.value
+
+    const nuevoProduct = { title, description, code, price, status, stock, category, thumbnail }
+
+    socket.emit('addProduct', nuevoProduct)
+
+    // form.reset()
+
+})
+
+function eliminarProducto (id){
+    socket.emit('deleteProduct', id)
+}

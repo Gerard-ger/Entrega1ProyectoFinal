@@ -88,50 +88,6 @@
 		"id": 17
 	},
 	{
-		"title": "asdqweq",
-		"description": "weqweqwe",
-		"code": 123123,
-		"price": 123124,
-		"status": "true",
-		"stock": 412312,
-		"category": "wqwqreq",
-		"thumbnail": "https://calcobel.com.ar/wp-content/uploads/2021/11/remera-negra.jpg",
-		"id": 18
-	},
-	{
-		"title": "w1e323",
-		"description": "123123",
-		"code": 412412,
-		"price": 14142,
-		"status": "true",
-		"stock": 12412,
-		"category": "ase12",
-		"thumbnail": "https://calcobel.com.ar/wp-content/uploads/2021/11/remera-negra.jpg",
-		"id": 19
-	},
-	{
-		"title": "w1e323",
-		"description": "123123",
-		"code": 412412,
-		"price": 14142,
-		"status": "true",
-		"stock": 12412,
-		"category": "ase12",
-		"thumbnail": "https://calcobel.com.ar/wp-content/uploads/2021/11/remera-negra.jpg",
-		"id": 20
-	},
-	{
-		"title": "w1e323",
-		"description": "123123",
-		"code": 412412,
-		"price": 14142,
-		"status": "true",
-		"stock": 12412,
-		"category": "ase12",
-		"thumbnail": "https://calcobel.com.ar/wp-content/uploads/2021/11/remera-negra.jpg",
-		"id": 21
-	},
-	{
 		"title": "aestge",
 		"description": "wrfete",
 		"code": 23523,
@@ -141,5 +97,27 @@
 		"category": "2352",
 		"thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-vi-rj1-122009f0e7fe0bfa3715906956218434-480-0.jpg",
 		"id": 22
+	},
+	{
+		"title": "asfasf",
+		"description": "safdasf",
+		"code": 123124,
+		"price": 4124,
+		"status": "true",
+		"stock": 12314,
+		"category": "12151",
+		"thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-vi-rj1-122009f0e7fe0bfa3715906956218434-480-0.jpg",
+		"id": 23
+	},
+	{
+		"title": "asdasdas",
+		"description": "asdasd",
+		"code": 213,
+		"price": 1424,
+		"status": "true",
+		"stock": 12415,
+		"category": "5123124",
+		"thumbnail": "https://dcdn.mitiendanube.com/stores/001/205/102/products/remera-lisa-vi-rj1-122009f0e7fe0bfa3715906956218434-480-0.jpg",
+		"id": 26
 	}
 ]
