@@ -25,12 +25,12 @@ socket.on('productList', products => {
                 </div>
             </div>                
         `
-        productListDiv.innerHTML = html
     })
-
+    productListDiv.innerHTML = html
 })
 
-let form = document.querySelector('#products-list')
+
+let form = document.querySelector('#products-form')
 
 form.addEventListener('submit', evt => {
     evt.preventDefault()
@@ -52,6 +52,6 @@ form.addEventListener('submit', evt => {
 
 })
 
-function eliminarProducto (id){
+function eliminarProducto(id) {
     socket.emit('deleteProduct', id)
 }
